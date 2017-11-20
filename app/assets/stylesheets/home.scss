@@ -1,3 +1,43 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.styling {
+	text-align: center;
+}
+
+.size{
+	height: 200px;
+	width: 200px;
+	display: inline-block;
+
+}
+
+// .col{
+// 	border: solid;
+// }
+
+.image {
+	width: 1300px;
+	height:400px;
+	margin-bottom: 5%;
+}
+
+.spacing_one {
+	margin-bottom: 5%;
+}
+
+.side {
+	margin-left: 21%;
+	border: none;
+}
+
+.middle {
+	 margin-left: 12%;
+	 border: none;
+}
+
+.right {
+	margin-right: 21%;
+	border: none;
+}

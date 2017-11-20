@@ -1,2 +1,189 @@
-<h1>Jobs#index</h1>
-<p>Find me in app/views/jobs/index.html.erb</p>
+<div class="header">
+  <h1 >Contracts</h1>
+  <h4>Select which contract</h4>
+</div>
+
+<div class="container-fluid">
+	<div class="row spacing">
+    <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("products.png", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">Merchandise</h4>
+        <p class="card-text">A cheaper way to transport bulk merchandise. Simply load your merchadise into a container and then we will pick it up and send it to it's new destination.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Orgin: Hawaii</li>
+        <li class="list-group-item">Destination: Guam</li>
+        <li class="list-group-item">Cost: $1,000</li>
+      </ul>
+      <div class="card-body">
+        <%= link_to "Cargo Ships", boats_path %>
+        <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+  <!-- end of column -->
+    <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("car.jpg", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">Cars</h4>
+        <p class="card-text">Moving to a new overseas location, well look no farther. We will transport your car to your new location.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Orgin: Hawaii</li>
+        <li class="list-group-item">Destination: California</li>
+        <li class="list-group-item">Cost: $10,000 per vehicle</li>
+      </ul>
+      <div class="card-body">
+       <%= link_to "Cargo Ships", boats_path %>
+       <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+    <!-- end of column -->
+   <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("container-home-3.jpg", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">Shipping Homes</h4>
+        <p class="card-text">Need to ship 10 pre-made container homes. Need space for 25 containers </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Orgin: Japan</li>
+        <li class="list-group-item">Destination: Thialand</li>
+        <li class="list-group-item">Cost: $5,000 per container</li>
+      </ul>`
+      <div class="card-body">
+        <%= link_to "Cargo Ships", boats_path %>
+        <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+<!-- end of column -->
+  </div>
+ <!-- end of row -->
+	<div class="row spacing">
+  	<div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("products.png", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">Merchandise</h4>
+        <p class="card-text">A cheaper way to transport bulk merchandise. Simply load your merchadise into a container and then we will pick it up and send it to it's new destination.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Orgin: Hawaii</li>
+        <li class="list-group-item">Destination: Guam</li>
+        <li class="list-group-item">Cost: $100,000</li>
+      </ul>
+      <div class="card-body">
+        <%= link_to "Cargo Ships", boats_path %>
+        <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+  <!-- end of column -->
+  	 <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("car.jpg", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">Cars</h4>
+        <p class="card-text">Moving to a new overseas location, well look no farther. We will transport your car to your new location.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Orgin: Hawaii</li>
+        <li class="list-group-item">Destination: California</li>
+        <li class="list-group-item">Cost$ 10,000</li>
+      </ul>
+      <div class="card-body">
+       <%= link_to "Cargo Ships", boats_path %>
+       <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+  <!-- end of column -->
+  	<div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("g_container.jpg", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">Containers</h4>
+        <p class="card-text">Containers are all the new rage of home building. We can ship your container anywhere you want to build.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Orgin: Japan</li>
+        <li class="list-group-item">Destination: Thialand</li>
+        <li class="list-group-item">Cost: $20,000</li>
+      </ul>
+      <div class="card-body">
+        <%= link_to "Cargo Ships", boats_path %>
+        <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+  <!-- end of column -->
+  </div>
+   <!-- end of row -->
+  <div class="row spacing">
+	  <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("products.png", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">Merchandise</h4>
+        <p class="card-text">A cheaper way to transport bulk merchandise. Simply load your merchadise into a container and then we will pick it up and send it to it's new destination.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Orgin: Hawaii</li>
+        <li class="list-group-item">Destination: Guam</li>
+        <li class="list-group-item">Cost: $100,000</li>
+      </ul>
+      <div class="card-body">
+        <%= link_to "Cargo Ships", boats_path %>
+        <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+   <!-- end of column -->
+	   <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("car.jpg", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">Cars</h4>
+        <p class="card-text">Moving to a new overseas location, well look no farther. We will transport your car to your new location.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Orgin: Hawaii</li>
+        <li class="list-group-item">Destination: California</li>
+        <li class="list-group-item">Cost$ 10,000</li>
+      </ul>
+      <div class="card-body">
+       <%= link_to "Cargo Ships", boats_path %>
+       <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+  <!-- end of column -->
+	 <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("g_container.jpg", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">Containers</h4>
+        <p class="card-text">Containers are all the new rage of home building. We can ship your container anywhere you want to build.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Orgin: Japan</li>
+        <li class="list-group-item">Destination: Thialand</li>
+        <li class="list-group-item">Cost: $20,000</li>
+      </ul>
+      <div class="card-body">
+        <%= link_to "Cargo Ships", boats_path %>
+        <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+ <!-- end of column -->
+ 	</div>
+  <!-- end of row -->
+</div>
+<!-- end of container -->
+

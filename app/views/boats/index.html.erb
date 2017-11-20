@@ -1,2 +1,121 @@
-<h1>Boats#index</h1>
-<p>Find me in app/views/boats/index.html.erb</p>
+<div class="header">
+  <h1 >Cargo Ships</h1>
+  <h4>Select a cargo ship</h4>
+</div>
+<div class="container-fluid style">
+  <div class="row spacing">
+    <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("boat_two.jpg", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">BERTHA</h4>
+       <!--  <p class="card-text">something bout the boat</p> -->
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Location: Hawaii</li>
+        <li class="list-group-item">Load Capacity: 500</li>
+      </ul>
+      <div class="card-body">
+        <%= link_to "Contracts", projects_path %>
+        <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+  <!-- end of column -->
+     <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("boat_three.jpg", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">OLGA</h4>
+        <!-- <p class="card-text">something bout the boat</p> -->
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Location: Japan</li>
+        <li class="list-group-item">Load Capacity: 300</li>
+      </ul>
+      <div class="card-body">
+        <%= link_to "Contracts", projects_path %>
+        <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+    <!-- end of column -->
+     <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("boat_four.jpg", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">SVEN</h4>
+     <!--    <p class="card-text">something bout the boat</p> -->
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Location: Switzerland</li>
+        <li class="list-group-item">Load Capacity: 400</li>
+      </ul>
+      <div class="card-body">
+        <%= link_to "Contracts", projects_path %>
+        <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+<!-- end of column -->
+  </div>
+ <!-- end of row -->
+  <div class="row spacing">
+     <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("boat_five.jpg", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">HORATIO</h4>
+        <!-- <p class="card-text">something bout the boat</p> -->
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Location: Austraila</li>
+        <li class="list-group-item">Load Capacity: 600</li>
+      </ul>
+      <div class="card-body">
+        <%= link_to "Contracts", projects_path %>
+        <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+  <!-- end of column -->
+     <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("boat_six.jpg", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">GUNTER</h4>
+       <!--  <p class="card-text">something bout the boat</p> -->
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Location: USA</li>
+        <li class="list-group-item">Load Capacity: 250</li>
+      </ul>
+      <div class="card-body">
+        <%= link_to "Contracts", projects_path %>
+        <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+  <!-- end of column -->
+     <div class="col">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag("boat_seven.jpg", class:"card-img-top size") %>
+        <div class="card-body">
+        <h4 class="card-title">LUCKY</h4>
+     <!--    <p class="card-text">something bout the boat</p> -->
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Location: India</li>
+        <li class="list-group-item">Load Capacity: 350</li>
+      </ul>
+      <div class="card-body">
+       <%= link_to "Contracts", projects_path %>
+        <%= link_to "cart", home_show_path, class:"fright" %>
+      </div>
+     </div>
+    </div>
+  <!-- end of column -->
+  </div>
+   <!-- end of row -->
+</div>
+<!-- end of container -->
