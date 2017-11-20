@@ -1,7 +1,7 @@
 class BoatsController < ApplicationController
     def index
     @boat = Boat.all
-    @contract = Project.all
+    @job = Job.all
   end
 
   def new
@@ -42,5 +42,4 @@ class BoatsController < ApplicationController
     params.require(:boat).permit(:name, :location, :location)
   end
 
-end
 end
