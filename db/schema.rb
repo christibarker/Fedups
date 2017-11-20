@@ -10,7 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120214445) do
+ActiveRecord::Schema.define(version: 20171120220225) do
+
+  create_table "boat_jobs", force: :cascade do |t|
+    t.integer "boat_id"
+    t.integer "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["boat_id"], name: "index_boat_jobs_on_boat_id"
+    t.index ["job_id"], name: "index_boat_jobs_on_job_id"
+  end
+
+  create_table "boats", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.string "max_capacity"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_boats_on_user_id"
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "name"
+    t.string "cost"
+    t.string "description"
+    t.string "orgin"
+    t.string "destination"
+    t.string "containers_needed"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_jobs_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
