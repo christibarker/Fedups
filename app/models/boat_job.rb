@@ -1,4 +1,5 @@
 class BoatJob < ApplicationRecord
-  belongs_to :boat
-  belongs_to :job
+	belongs_to :jobs
+  belongs_to :user
+  belongs_to :boats
 end
