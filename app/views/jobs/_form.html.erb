@@ -1,5 +1,5 @@
   <%= form_with model: @job, html: {multipart: true} do |f| %>
-    <%= f.label :avatar, "add image" %>
+    <%# f.label :avatar, "add image" %>
     <br>
     <%= f.file_field :avatar %>
     <br>
@@ -23,6 +23,6 @@
     <br>
     <%# form.file_field :avatar %>
     <br>
-    <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+    <%= f.submit "Create Contract", :disable_with => 'Submiting...' %>
     <% end %>
 </div>	

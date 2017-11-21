@@ -1,14 +1,24 @@
 
 			<div class="card col-sm-3" style="width: 20rem;">
-        <%= image_tag @boat.avatar.url, class:"card-img-top size") %>
+        <%= image_tag boat.avatar.url(:thumb) %>
         <div class="card-body">
-        	<h4 class="card-title">BERTHA</h4>
+        	<h4 class="card-title"><%= boat.name %></h4>
        		<!--  <p class="card-text">something bout the boat</p> -->
       	</div>
       	<ul class="list-group list-group-flush">
-	        <li class="list-group-item">Location:</li>
-	        <li class="list-group-item">Load Capacity:</li>
+	        <li class="list-group-item">Location: <%= boat.location %></li>
+	        <li class="list-group-item">Max. Capacity:<%= boat.max_capacity %></li>
       	</ul>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
       	<div class="card-body">
         	<%= link_to "Contracts", jobs_path %>
         <%# link_to "cart", home_show_path, class:"fright" %>

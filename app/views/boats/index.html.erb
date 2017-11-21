@@ -1,1 +1,13 @@
+<div class="header">
+  <h1 >Cargo Ships</h1>
+  <h4>Select a cargo ship</h4>
+	<%= render 'form' %>
+</div>
+<div class="container-fluid style">
+  <div class="row spacing">
+ 	<% @boats.each do |job| %>
+      <%= render boat %>
+    <% end %>  
+  </div> <!-- end of row -->
+</div> <!-- end of container -->
 
