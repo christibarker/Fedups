@@ -51,12 +51,12 @@
       <%= f.password_field :current_password, autocomplete: "off" %>
     </div>
     <div class="field">
-      <% if resources.avatar.file? %>
+      <% if resource.avatar.file? %>
         <p>Your Current Image:</p>
-        <%= image_tag resources.avatar.url(:thumb) %>
+        <%= image_tag resource.avatar.url(:thumb) %>
       <% end %>
-      <%= f.label :avatar "Your Image" %>
-      <%= form.file_field :avatar %>
+      <%= f.label :avatar, "Your Image" %>
+      <%= f.file_field :avatar %>
     </div>
     <div class="actions">
       <%= f.submit "Update" %>
