@@ -1,7 +1,7 @@
 class BoatsController < ApplicationController
     def index
-    @boat = Boat.all
-    @job = Job.all
+    @boats = Boat.all
+    @job_all = Job.all
   end
 
   def new
@@ -16,7 +16,7 @@ class BoatsController < ApplicationController
 
   def show
     @user = current_user
-    @boat_all = Boat.all
+    @boats = Boat.all
     @boat = Boat.find(params[:id])
   end
 
@@ -26,7 +26,7 @@ class BoatsController < ApplicationController
 
   def update
     @boat = Boat.find(params[:id])
-    @boat.update(post_params)
+    @boat.update(boat_params)
     redirect_to current_user 
   end
 

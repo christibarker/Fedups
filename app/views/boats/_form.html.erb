@@ -1,4 +1,5 @@
   <%= form_with model: @boat, html: {multipart: true}  do |f| %>
+
     <%= f.label :avatar, "add image" %>
     <br>
     <%= f.file_field :avatar %>
@@ -6,24 +7,12 @@
 		<%= f.label :name %>
     <%= f.text_field :name, placeholder: 'name', class: "form-control", id: "name" %>
     <br>
-    <%= f.label :description %>
-    <%= f.text_field :description, placeholder: 'description', class: "form-control", id: "description" %>
+    <%= f.label :location %>
+    <%= f.text_field :location, placeholder: 'location', class: "form-control", id: "location" %>
     <br>
-    <%= f.label :orgin %>
-    <%= f.text_field :orgin, placeholder: 'orgin', class: "form-control", id: "orgin" %>
+    <%= f.label :max_capacity %>
+    <%= f.text_field :max_capacity, placeholder: 'max_capacity', class: "form-control", id: "max_capacity" %>
     <br>
-    <%= f.label :destination %>
-    <%= f.text_field :destination, placeholder: 'destination', class: "form-control", id: "destination" %>
-    <br>
-    <%= f.label :containers_needed %>
-    <%= f.text_field :containers_needed, placeholder: 'containers needed', class: "form-control", id: "containers_needed" %>
-    <br>
-    <%= f.label :cost %>
-    <%= f.text_field :cost, placeholder: 'cost', class: "form-control", id: "cost" %>
-    <br>
-    <%= f.label :avatar "image" %>
-    <%# form.file_field :avatar %>
-    <br>
-    <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+    <%= f.submit "create ship", :disable_with => 'Submiting...' %>
     <% end %>
 </div>	
