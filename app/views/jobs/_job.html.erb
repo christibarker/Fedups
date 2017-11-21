@@ -1,18 +1,33 @@
 
 
-      <div class="card col-sm-3" style="width: 20rem;">
-        <%= image_tag("products.png", class:"card-img-top size") %>
-        <div class="card-body">
-        <h4 class="card-title">Merchandise</h4>
-        <p class="card-text">A cheaper way to transport bulk merchandise. Simply load your merchadise into a container and then we will pick it up and send it to it's new destination.</p>
+  <div class="card col-sm-3" style="width: 20rem;">
+    <%# image_tag @job.avatar.url(:thumb) %>
+    <div class="card-body">
+      <h4 class="card-title"><%= job.name  %></h4>
+      <p class="card-text">Description: <%= job.description %></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Orgin: <%=  job.orgin %> </li>
+      <li class="list-group-item">Destination: <%=  job.destination %> </li>
+      <li class="list-group-item">Cost: <%= job.cost %> </li>
+    </ul>
+    <br>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Orgin: </li>
-        <li class="list-group-item">Destination: </li>
-        <li class="list-group-item">Cost: </li>
-      </ul>
-      <div class="card-body">
-        <%= link_to "Cargo Ships", boats_path %>
-        <%# link_to "cart", home_show_path, class:"fright" %>
-      </div>
-     </div>
+    </div>
+    <div class="card-body">
+      <%= link_to "Cargo Ships", boats_path %>
+      <%# link_to "cart", home_show_path, class:"fright" %>
+    </div>
+  </div>
+
+  <%# image_tag @job.avatar.url %>
+<%# image_tag @job.avatar.url(:medium) %>
+<%# image_tag @job.avatar.url(:thumb) %>

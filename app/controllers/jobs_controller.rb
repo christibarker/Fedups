@@ -1,21 +1,22 @@
 class JobsController < ApplicationController
  def index
-    @boat = Boat.all
-    @job = Job.all
+    @boats = Boat.all
+    @job_all = Job.all
   end
 
   def new
-    @Job.new
+    @job = Job.new
   end
 
   def create
-    @user = current_usejob = @user.job.create(project_params)
-    redirect_to 
+    @user = current_user
+    @job = @user.jobs.create(job_params)
+    # redirect_to 
   end
 
   def show
     @user = current_user
-    @job = Job.all
+    @job_all = Job.all
     @job = Job.find(params[:id])
   end
 
@@ -25,7 +26,7 @@ class JobsController < ApplicationController
 
   def update
     @job = Job.find(params[:id])
-    @job.update(project_params)
+    @job.update(job_params)
     redirect_to current_user 
   end
 
@@ -37,7 +38,7 @@ class JobsController < ApplicationController
 
  private
 
-  def project_params
+  def job_params
     params.require(:job).permit(:name, :cost, :description, :orgin, :destination)
   end
 end

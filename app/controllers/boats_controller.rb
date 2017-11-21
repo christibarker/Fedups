@@ -5,7 +5,7 @@ class BoatsController < ApplicationController
   end
 
   def new
-    @boat.new
+    @boat = Boat.new
   end
 
   def create
