@@ -1,11 +1,11 @@
 <div class="header">
   <h1 >Cargo Ships</h1>
-  <h4>Select a cargo ship</h4>
+  <h4>Select or create a cargo ship</h4>
 	<%= render 'form' %>
 </div>
 <div class="container-fluid style">
   <div class="row spacing">
- 	<% @boats.each do |job| %>
+ 	<% @boats.each do |boat| %>
       <%= render boat %>
     <% end %>  
   </div> <!-- end of row -->

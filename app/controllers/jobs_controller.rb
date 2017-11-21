@@ -2,6 +2,7 @@ class JobsController < ApplicationController
  def index
     @boats = Boat.all
     @job_all = Job.all
+    @job = Job.new
   end
 
   def new
@@ -27,13 +28,13 @@ class JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
     @job.update(job_params)
-    redirect_to current_user 
+    redirect_to jobs_path 
   end
 
   def destroy
     @user = current_user
     @job = Job.find(params[:id]).destroy
-    redirect_to @user
+    redirect_to jobs_path
   end
 
  private

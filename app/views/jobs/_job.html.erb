@@ -9,22 +9,28 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Orgin: <%=  job.orgin %> </li>
       <li class="list-group-item">Destination: <%=  job.destination %> </li>
+      <li class="list-group-item">Containers Needed: <%=  job.containers_needed %> </li>
       <li class="list-group-item">Cost: <%= job.cost %> </li>
     </ul>
     <br>
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown button
+          Select Ship
+          <%=  select("local_boats", "boat_id", @boats.all.collect {|b| [ b.name, b.id ] }, {prompt: 'Select Ship'}) %>
+
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+        <!-- <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a> -->
       </div>
     </div>
     <div class="card-body">
-      <%= link_to "Cargo Ships", boats_path %>
-      <%# link_to "cart", home_show_path, class:"fright" %>
+      <!-- add link, add job to there jobs -->
+      <%# link_to image_tag("Add.png", class: "format"), jobs_path(job) %>
+      <% if current_user == job.user %>
+        <%= link_to image_tag("delete.png", class: "format"), job,  method: :delete %>
+        <%= link_to image_tag("Orange_Edit.png", class: "format"),edit_job_path(job) %>
+      <% end %>
     </div>
   </div>
 

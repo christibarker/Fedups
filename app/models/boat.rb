@@ -3,6 +3,13 @@ class Boat < ApplicationRecord
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   
   belongs_to :user
- 	has_and_belongs_to_many :jobs
+ 	has_many :boat_jobs
+ 	has_many :jobs, through: :boat_jobs
+
+
+ 	  def local_jobs()
+  		jobs = Job.where(origin: location).where(current_user: user_id)
+
+  end
 
 end
