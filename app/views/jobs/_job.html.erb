@@ -1,7 +1,7 @@
 
 
   <div class="card col-sm-3" style="width: 20rem;">
-    <%# image_tag @job.avatar.url(:thumb) %>
+    <%= image_tag job.avatar.url(:thumb) %>
     <div class="card-body">
       <h4 class="card-title"><%= job.name  %></h4>
       <p class="card-text">Description: <%= job.description %></p>

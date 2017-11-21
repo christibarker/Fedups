@@ -1,4 +1,4 @@
-  <%= form_with model: @job, html: {multipart: true} do |f| %>
+  <%= form_with model: @boat, html: {multipart: true}  do |f| %>
     <%= f.label :avatar, "add image" %>
     <br>
     <%= f.file_field :avatar %>
@@ -21,6 +21,7 @@
     <%= f.label :cost %>
     <%= f.text_field :cost, placeholder: 'cost', class: "form-control", id: "cost" %>
     <br>
+    <%= f.label :avatar "image" %>
     <%# form.file_field :avatar %>
     <br>
     <%= f.submit "Submit", :disable_with => 'Submiting...' %>
