@@ -1,0 +1,20 @@
+<div class="header">
+  <h1 >Your Listings</h1>
+</div>
+
+<div class="container-fluid">
+	<div class="row spacing">
+   <% @job_all.each do |job| %>
+   	<% if current_user == job.user %>
+      <%= render job %>
+     <%end %>
+  <% end %>
+
+  <% @boats.each do |boat| %>
+  	<% if current_user == boat.user %>
+      <%= render boat %>
+    <% end %>
+   <% end %>  
+  </div> <!-- end of row -->
+</div> <!-- end of container -->
+
