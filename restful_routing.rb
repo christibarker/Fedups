@@ -1,4 +1,6 @@
                   Prefix Verb   URI Pattern                    Controller#Action
+             users_index GET    /users/index(.:format)         users#index
+              users_show GET    /users/show(.:format)          users#show
               home_index GET    /home/index(.:format)          home#index
                          GET    /home(.:format)                home#index
                          POST   /home(.:format)                home#create
