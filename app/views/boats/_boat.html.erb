@@ -21,7 +21,7 @@
         </div>
       	<div class="card-body">
         	<!-- add link, add job to there jobs -->
-          <%# link_to image_tag("Add.png", class: "format"), jobs_path(job) %>
+          <%= link_to image_tag("Add.png", class: "format_left"), users_show_path(boat) %>
           <% if current_user == boat.user %>
             <%= link_to image_tag("delete.png", class: "format"), boat,  method: :delete %>
             <%= link_to image_tag("Orange_Edit.png", class: "format"),edit_boat_path(boat) %>
