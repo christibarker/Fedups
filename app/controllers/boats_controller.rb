@@ -3,6 +3,7 @@ class BoatsController < ApplicationController
     @boats = Boat.all
     @job_all = Job.all
     @boat = Boat.new
+    @boat_job = BoatJob.new
   end
 
   def new
@@ -40,7 +41,7 @@ class BoatsController < ApplicationController
  private
 
   def boat_params
-    params.require(:boat).permit(:name, :location, :max_capacity, :avatar)
+    params.require(:boat).permit(:name, :location, :max_capacity, :avatar, :id)
   end
 
 end

@@ -8,7 +8,7 @@ class Job < ApplicationRecord
  	has_many :boats, through: :boat_jobs
 
   def local_boats()
-  		boats = Boat.where(origin: location).where(current_user: user_id)
+  		jobs = Job.where(origin: location).where(current_user: user_id)
 
   end
  
