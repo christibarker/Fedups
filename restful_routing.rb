@@ -1,8 +1,5 @@
                   Prefix Verb   URI Pattern                    Controller#Action
-             users_index GET    /users/index(.:format)         users#index
-              users_show GET    /users/show(.:format)          users#show
-              home_index GET    /home/index(.:format)          home#index
-                         GET    /home(.:format)                home#index
+              home_index GET    /home(.:format)                home#index
                          POST   /home(.:format)                home#create
                 new_home GET    /home/new(.:format)            home#new
                edit_home GET    /home/:id/edit(.:format)       home#edit
@@ -26,6 +23,14 @@
                          PATCH  /jobs/:id(.:format)            jobs#update
                          PUT    /jobs/:id(.:format)            jobs#update
                          DELETE /jobs/:id(.:format)            jobs#destroy
+               boat_jobs GET    /boat_jobs(.:format)           boat_jobs#index
+                         POST   /boat_jobs(.:format)           boat_jobs#create
+            new_boat_job GET    /boat_jobs/new(.:format)       boat_jobs#new
+           edit_boat_job GET    /boat_jobs/:id/edit(.:format)  boat_jobs#edit
+                boat_job GET    /boat_jobs/:id(.:format)       boat_jobs#show
+                         PATCH  /boat_jobs/:id(.:format)       boat_jobs#update
+                         PUT    /boat_jobs/:id(.:format)       boat_jobs#update
+                         DELETE /boat_jobs/:id(.:format)       boat_jobs#destroy
         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
             user_session POST   /users/sign_in(.:format)       devise/sessions#create
     destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy

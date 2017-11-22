@@ -11,17 +11,20 @@
       	</ul>
         <br>
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               Select Contract
-          <%=  select("local_jobs", "job_id", @job_all.all.collect {|j| [ j.name, j.id ] }, {prompt: 'Select Contract'}) %>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#"><%# job_all.name %></a>
-          </div>
+          <%= form_with model: @boat_job  do |f| %>
+            <%=  select("local_jobs", "job_id", @job_all.all.collect {|j| [ j.name, j.id ] }, {prompt: 'Select Contract'}) %>
+            <%= f.hidden_field :boat_id, value: boat.id %>
+            <%= f.submit "add", :disable_with => 'Submiting...' %>
+          <% end %>
+          <ul class="list-group list-group-flush">
+            <% @job_all.each do |job| %>
+              <li class="list-group-item"><%= job.name %></li>
+            <% end %> 
+          </ul>
         </div>
       	<div class="card-body">
         	<!-- add link, add job to there jobs -->
-          <%= link_to image_tag("Add.png", class: "format_left"), users_show_path(boat) %>
+          <%# link_to image_tag("Add.png", class: "format_left"), user_path(current_user) %>
           <% if current_user == boat.user %>
             <%= link_to image_tag("delete.png", class: "format"), boat,  method: :delete %>
             <%= link_to image_tag("Orange_Edit.png", class: "format"),edit_boat_path(boat) %>
