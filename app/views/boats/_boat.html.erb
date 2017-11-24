@@ -16,11 +16,6 @@
             <%= f.hidden_field :boat_id, value: boat.id %>
             <%= f.submit "add", :disable_with => 'Submiting...' %>
           <% end %>
-          <ul class="list-group list-group-flush">
-            <% @job_all.each do |job| %>
-              <li class="list-group-item"><%= job.name %></li>
-            <% end %> 
-          </ul>
         </div>
       	<div class="card-body">
         	<!-- add link, add job to there jobs -->
