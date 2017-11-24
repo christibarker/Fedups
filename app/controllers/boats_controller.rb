@@ -1,5 +1,6 @@
 class BoatsController < ApplicationController
-    def index
+  # before_action :authenticate, only: [:new, :create, :edit, :update, :destroy]
+  def index
     @boats = Boat.all
     @job_all = Job.all
     @boat = Boat.new
@@ -11,13 +12,15 @@ class BoatsController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @boat = @user.boats.create(boat_params)
-    # redirect_to 
+    respond_to do |format|
+    @boat = current_user.boats.create(boat_params)
+    format.js
+    format.html{redirect_to boats_path}
+    end
   end
 
   def show
-    @user = current_user
+    @user = current_user 
     @boats = Boat.all
     @boat = Boat.find(params[:id])
   end
@@ -33,9 +36,11 @@ class BoatsController < ApplicationController
   end
 
   def destroy
-    @user = current_user
-    @boat = Boat.find(params[:id]).destroy
-    redirect_to boats_path
+    respond_to do |format|
+      @boat = Boat.find(params[:id]).destroy
+      format.js
+      format.html{redirect_to boats_path}
+    end
   end
 
  private
