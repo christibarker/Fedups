@@ -8,10 +8,15 @@
 // }
 
 .spacing {
-	margin-bottom: 5%;
-	margin-left: 5%;
+   margin-left: 5%;
+   margin-right: 3%;
+   margin-bottom: 3%;
 }
 
+.center {
+	display: block;
+	text-align: center;
+}
 
 // .card-title {
 // 	text-align: center;
@@ -32,3 +37,13 @@
 // .center {
 // 	text-align: center;
 // }
+
+.form {
+	height: auto;
+	width: 600px;
+	display: inline-block;
+}
+
+.button{
+	margin-left: 41%;
+}
