@@ -1,18 +1,21 @@
-  <%= form_with model: @boat, html: {multipart: true}  do |f| %>
-
-    <%= f.label :avatar, "add image" %>
-    <br>
-    <%= f.file_field :avatar %>
-    <br>
-		<%= f.label :name %>
-    <%= f.text_field :name, placeholder: 'name', class: "form-control", id: "name" %>
-    <br>
-    <%= f.label :location %>
-    <%= f.text_field :location, placeholder: 'location', class: "form-control", id: "location" %>
-    <br>
-    <%= f.label :max_capacity %>
-    <%= f.text_field :max_capacity, placeholder: 'max_capacity', class: "form-control", id: "max_capacity" %>
-    <br>
-    <%= f.submit %>
+ 
+<div class="form">
+    <%= form_with model: @boat, html: {multipart: true}  do |f| %>
+        <br>
+    	<%= f.label :name %>
+        <%= f.text_field :name, placeholder: 'name', class: "form-control", id: "name" %>
+        <br>
+        <%= f.label :location %>
+        <%= f.text_field :location, placeholder: 'location', class: "form-control", id: "location" %>
+        <br>
+        <%= f.label :max_capacity %>
+        <%= f.text_field :max_capacity, placeholder: 'max_capacity', class: "form-control", id: "max_capacity" %>
+        <br>
+        <%= f.label :avatar, "add image" %>
+        <br>
+        <%= f.file_field :avatar, class:"button" %>
+        <br>
+        <br>
+        <%= f.submit %>
     <% end %>
 </div>	

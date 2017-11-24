@@ -8,8 +8,9 @@
 }
 
 .spacing {
-	margin-bottom: 5%;
-	margin-left: 5%;
+   margin-left: 5%;
+   margin-right: 3%;
+   margin-bottom: 3%;
 }
 
 .size {
@@ -31,4 +32,14 @@
 .format_left {
 	height: 60px;
 	width: 60px;
+}
+
+.form {
+	height: auto;
+	width: 600px;
+	display: inline-block;
+}
+
+.button{
+	margin-left: 41%;
 }
