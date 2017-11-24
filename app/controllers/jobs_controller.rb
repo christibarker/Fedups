@@ -1,4 +1,6 @@
 class JobsController < ApplicationController
+  # before_action :authenticate, only: [:new, :create, :edit, :update, :destroy]
+ 
  def index
     @boats = Boat.all
     @job_all = Job.all
@@ -10,9 +12,11 @@ class JobsController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @job = @user.jobs.create(job_params)
-    # redirect_to 
+    respond_to do |format|
+    @job = current_user.jobs.create(job_params)
+    format.js
+    format.html{redirect_to jobs_path}
+    end
   end
 
   def show
@@ -32,14 +36,16 @@ class JobsController < ApplicationController
   end
 
   def destroy
-    @user = current_user
-    @job = Job.find(params[:id]).destroy
-    redirect_to jobs_path
+    respond_to do |format|
+      @job = Job.find(params[:id]).destroy
+      format.js
+      format.html{redirect_to jobs_path}
+    end
   end
 
  private
 
   def job_params
-    params.require(:job).permit(:name, :cost, :description, :orgin, :destination, :avatar)
+    params.require(:job).permit(:name, :cost, :description, :orgin, :destination, :avatar, :id)
   end
 end

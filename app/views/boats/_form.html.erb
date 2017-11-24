@@ -1,6 +1,6 @@
  
-<div class="form">
-    <%= form_with model: @boat, html: {multipart: true}  do |f| %>
+<div class="boat form">
+    <%= form_with model: @boat, class:"new_boat", html: {multipart: true}  do |f| %>
         <br>
     	<%= f.label :name %>
         <%= f.text_field :name, placeholder: 'name', class: "form-control", id: "name" %>

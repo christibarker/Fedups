@@ -1,6 +1,6 @@
   
 <div class="form">
-    <%= form_with model: @job, html: {multipart: true} do |f| %>
+    <%= form_with model: @job, class:"new_job", html: {multipart: true} do |f| %>
     	<%= f.label :name %>
         <%= f.text_field :name, placeholder: 'name', class: "form-control", id: "name" %>
         <br>
