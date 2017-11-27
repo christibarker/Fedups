@@ -1,6 +1,6 @@
 
 
-  <div class="card col-sm-3 spacing" style="width: 20rem;">
+  <div class="card col-sm-3 spacing job" id="job-<%= job.id %>" style="width: 20rem;">
     <%= image_tag job.avatar.url(:thumb) %>
     <div class="card-body">
       <h4 class="card-title"><%= job.name  %></h4>
@@ -14,10 +14,20 @@
     </ul>
     <br>
     <div class="dropdown">
-      <%= form_with model: @boat_job  do |f| %>
+      <%= form_with model: @boat_job, class: "new_boat_job"  do |f| %>
         <%=  select("local_boats", "boat_id", @boats.all.collect {|b| [ b.name, b.id ] }, {prompt: 'Select Ship'}) %>
         <%= f.hidden_field :job_id, value: job.id %>
         <%= f.submit "add", :disable_with => 'Submiting...' %>
+      <% end %>
+    </div>
+    <div class="card-body job_boats">
+      <% job.boats.each do |boat| %>
+      <ul>
+        <li class="list-group"><%= boat.name %>
+          <% if current_user == job.user %>
+            <%= link_to image_tag("delete.png", class: "format_small"), boat,  method: :delete, remote: true %>
+          <% end %>
+      </ul>
       <% end %>
     </div>
     <div class="card-body">

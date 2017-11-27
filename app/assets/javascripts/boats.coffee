@@ -9,5 +9,8 @@ $('.new_boat').on 'submit', ->
 
 		$(document).on 'turbolinks:load', ->
 	$('.destroy').on 'ajax:sucess', ->
-# 		# console.log('worked')
-		$(this).closest('.boat').remove
+		# console.log('worked')
+		$(this).closest('.boat').remove()
+
+		$(document).on 'turbolinks:load', ->
+		$('.boat_list').on 'submit', ->

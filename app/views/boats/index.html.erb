@@ -4,10 +4,10 @@
   <%= render 'form' %>
 </div>
 <div class="container-fluid style">
-  <div class="row boats spacing" id="boat-<%= @boat.id %>">
+  <div class="row job_boats spacing" id="boat-<%= @boat.id %>">
   <% @boats.each do |boat| %>
       <%= render boat %>
   <% end %> 
-  </div> <!-- end of row -->
-</div> <!-- end of container -->
+  </div>
+</div>
 

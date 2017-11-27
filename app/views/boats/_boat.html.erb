@@ -1,5 +1,5 @@
 
-			<div class="card col-sm-3 spacing" style="width: 20rem;">
+			<div class="card col-sm-3 spacing boat" style="width: 20rem;">
         <%= image_tag boat.avatar.url(:medium) %>
         <div class="card-body">
         	<h4 class="card-title"><%= boat.name %></h4>
@@ -10,7 +10,7 @@
 	        <li class="list-group-item">Max. Capacity: <%= boat.max_capacity %></li>
       	</ul>
         <br>
-        <div class="dropdown">
+        <div class="dropdown boat_list">
           <%= form_with model: @boat_job  do |f| %>
             <%=  select("local_jobs", "job_id", @job_all.all.collect {|j| [ j.name, j.id ] }, {prompt: 'Select Contract'}) %>
             <%= f.hidden_field :boat_id, value: boat.id %>
