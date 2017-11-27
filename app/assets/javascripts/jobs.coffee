@@ -2,12 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on 'turbolinks:load', ->
-$('.new_job').on 'submit', ->
-		# console.log(this)
-		window.job_section = $(this).closest('.jobs').find('.job').attr('id')
+	$('.new_boat_job').on 'submit', ->
+			window.job_section = $(this).closest('.job').attr('id')
 
+	$('.destroy').on 'ajax:sucess', ->
+		# console.log('worked')
+		$(this).closest('.job').remove()
 
-		$(document).on 'turbolinks:load', ->
-			$('.destroy').on 'ajax:sucess', ->
-# 		# console.log('worked')
-				$(this).closest('.job').remove

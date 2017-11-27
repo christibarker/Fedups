@@ -6,9 +6,11 @@ class BoatJobsController < ApplicationController
 
 
   def create
-  	@boat = Boat.find(params[:boat_job][:boat_id])
-  	@job = Job.find(params[:local_jobs][:job_id])
-  	@boat.jobs << @job
-  	redirect_to boats_path
+  	respond_to do |format|
+	  	@boat = Boat.find(params[:local_boats][:boat_id])
+	  	@job = Job.find(params[:boat_job][:job_id])
+	  	@boat.jobs << @job
+	  	format.js
+		end	
   end
 end

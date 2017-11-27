@@ -1,16 +1,13 @@
 <div class="header">
   <h1 >Cargo Ships</h1>
   <h4>Select or create a cargo ship</h4>
-	<%= render 'form' %>
+  <%= render 'form' %>
 </div>
 <div class="container-fluid style">
-  <div class="row boats spacing" id="boat-<%= @boat.id %>">
+  <div class="row job_boats spacing" id="boat-<%= @boat.id %>">
   <% @boats.each do |boat| %>
       <%= render boat %>
-      <% if current_user == boat.user %>
-        <%= link_to image_tag("delete.png", class: "format_small"), boat,  method: :delete, remote: true %>
-      <% end %>
   <% end %> 
-  </div> <!-- end of row -->
-</div> <!-- end of container -->
+  </div>
+</div>
 
