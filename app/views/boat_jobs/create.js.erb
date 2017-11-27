@@ -1,5 +1,11 @@
-$('#' + window.job_section).find('.job_boats').append("<%= @boat.name %>");
+$('#' + window.job_section).find('.job_boats').append(`
+	<%= @boat.name %> <%= link_to image_tag("delete.png", class: "format_small"), destroy_boat_job_path(boat_id: @boat.id, job_id: @job.id),  method: :delete, remote: true %>
+	`);
 $('.new_boat_job').trigger('reset');
 
-$('#' + window.job_section).find('.boat_jobs').append("<%= @job.name %>");
+
+$('#' + window.boat_section).find('.boat_jobs').append(`
+	<%= @job.name %> <%= link_to image_tag("delete.png", class: "format_small"), destroy_boat_job_path(boat_id: @boat.id, job_id: @job.id),  method: :delete, remote: true %>
+	`);
 $('.new_job_boat').trigger('reset');
+ 
