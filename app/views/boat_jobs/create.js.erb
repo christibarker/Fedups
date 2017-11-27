@@ -1,2 +1,5 @@
 $('#' + window.job_section).find('.job_boats').append("<%= @boat.name %>");
 $('.new_boat_job').trigger('reset');
+
+$('#' + window.job_section).find('.boat_jobs').append("<%= @job.name %>");
+$('.new_job_boat').trigger('reset');

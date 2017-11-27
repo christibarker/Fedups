@@ -2,15 +2,12 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on 'turbolinks:load', ->
-$('.new_boat').on 'submit', ->
-		# console.log(this)
-		# window.boat_section = $(this).closest('.boats').find('.boat').attr('id')
+	$('.new_job_boat').on 'submit', ->
+			window.job_section = $(this).closest('.boat').attr('id')
 
+	# $('.new_boat').on 'submit', ->
+	# 	window.job_section = $(this).closest('.boat').attr('id')
 
-		$(document).on 'turbolinks:load', ->
 	$('.destroy').on 'ajax:sucess', ->
-		# console.log('worked')
+			# console.log('worked')
 		$(this).closest('.boat').remove()
-
-		$(document).on 'turbolinks:load', ->
-		$('.boat_list').on 'submit', ->
