@@ -30,7 +30,7 @@
                 boat_job GET    /boat_jobs/:id(.:format)       boat_jobs#show
                          PATCH  /boat_jobs/:id(.:format)       boat_jobs#update
                          PUT    /boat_jobs/:id(.:format)       boat_jobs#update
-                         DELETE /boat_jobs/:id(.:format)       boat_jobs#destroy
+        destroy_boat_job DELETE /boat_jobs(.:format)           boat_jobs#destroy
         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
             user_session POST   /users/sign_in(.:format)       devise/sessions#create
     destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy

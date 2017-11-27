@@ -1,5 +1,5 @@
 
-			<div class="card col-sm-3 spacing boat" style="width: 20rem;">
+			<div class="card col-sm-3 spacing boat" id="boat-<%= @boat.id %>" style="width: 20rem;">
         <%= image_tag boat.avatar.url(:medium) %>
         <div class="card-body">
         	<h4 class="card-title"><%= boat.name %></h4>
@@ -10,12 +10,23 @@
 	        <li class="list-group-item">Max. Capacity: <%= boat.max_capacity %></li>
       	</ul>
         <br>
-        <div class="dropdown boat_list">
-          <%= form_with model: @boat_job  do |f| %>
-            <%=  select("local_jobs", "job_id", @job_all.all.collect {|j| [ j.name, j.id ] }, {prompt: 'Select Contract'}) %>
+        <div class="dropdown">
+          <%= form_with model: @boat_job, scope: 'boat_job', class: "new_job_boat"  do |f| %>
+           <%= f.collection_select(:job_id, @job_all, :id, :name)%>
+            <%#  select("local_jobs", "job_id", @job_all.all.collect {|j| [ j.name, j.id ] }, {prompt: 'Select Contract'}) %>
             <%= f.hidden_field :boat_id, value: boat.id %>
             <%= f.submit "add", :disable_with => 'Submiting...' %>
           <% end %>
+          <div class="card-body job boat_jobs">
+              <% boat.jobs.each do |job| %>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><%= job.name %>
+                <% if current_user == boat.user %>
+                  <%= link_to image_tag("delete.png", class: "format_small"), destroy_boat_job_path(boat_id: boat.id, job_id: job.id),  method: :delete, remote: true %>
+                <% end %>
+            </ul>
+            <% end %>
+          </div>
         <div class="card-body">
           <!-- add link, add job to there jobs -->
           <%# link_to image_tag("Add.png", class: "format_left"), user_path(current_user) %>
