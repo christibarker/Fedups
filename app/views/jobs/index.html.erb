@@ -8,9 +8,6 @@
   <div class="row jobs spacing" id="job-<%= @job.id %>">
    <% @job_all.each do |job| %>
       <%= render job %>
-       <% if current_user == job.user %>
-        <%= link_to image_tag("delete.png", class: "format_small"), job,  method: :delete, remote: true %>
-      <% end %>
   <% end %>
   </div> <!-- end of row -->
 </div> <!-- end of container -->

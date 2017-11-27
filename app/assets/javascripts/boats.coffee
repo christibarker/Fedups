@@ -4,7 +4,7 @@
 $(document).on 'turbolinks:load', ->
 $('.new_boat').on 'submit', ->
 		# console.log(this)
-		window.boat_section = $(this).closest('.boats').find('.boat').attr('id')
+		# window.boat_section = $(this).closest('.boats').find('.boat').attr('id')
 
 
 		$(document).on 'turbolinks:load', ->

@@ -5,6 +5,7 @@ class JobsController < ApplicationController
     @boats = Boat.all
     @job_all = Job.all
     @job = Job.new
+    @boat_job = BoatJob.new
   end
 
   def new
@@ -12,6 +13,9 @@ class JobsController < ApplicationController
   end
 
   def create
+    @boat_job = BoatJob.new
+    @boats = Boat.all
+    @job_all = Job.all
     respond_to do |format|
     @job = current_user.jobs.create(job_params)
     format.js

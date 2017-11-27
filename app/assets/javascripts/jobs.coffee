@@ -4,7 +4,7 @@
 $(document).on 'turbolinks:load', ->
 $('.new_job').on 'submit', ->
 		# console.log(this)
-		window.job_section = $(this).closest('.jobs').find('.job').attr('id')
+		# window.job_section = $(this).closest('.jobs').find('.job').attr('id')
 
 
 		$(document).on 'turbolinks:load', ->

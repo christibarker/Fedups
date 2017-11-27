@@ -12,6 +12,9 @@ class BoatsController < ApplicationController
   end
 
   def create
+    @boat_job = BoatJob.new
+    @boats = Boat.all
+    @job_all = Job.all
     respond_to do |format|
     @boat = current_user.boats.create(boat_params)
     format.js
@@ -30,6 +33,7 @@ class BoatsController < ApplicationController
   end
 
   def update
+    @job_all = Job.all
     @boat = Boat.find(params[:id])
     @boat.update(boat_params)
     redirect_to boats_path
