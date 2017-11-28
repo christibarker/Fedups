@@ -24,7 +24,6 @@ class BoatsController < ApplicationController
 
   def show
     @boat_job = BoatJob.new
-    @user = current_user 
     @boats = Boat.all
     @boat = Boat.find(params[:id])
   end

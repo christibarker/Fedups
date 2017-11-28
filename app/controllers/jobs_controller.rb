@@ -24,7 +24,7 @@ class JobsController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @boat_job = BoatJob.new
     @job_all = Job.all
     @job = Job.find(params[:id])
   end

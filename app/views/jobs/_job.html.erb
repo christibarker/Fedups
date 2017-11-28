@@ -1,7 +1,7 @@
 
 
   <div class="card col-sm-3 spacing job" id="job-<%= job.id %>" style="width: 20rem;">
-    <%= image_tag job.avatar.url(:thumb) %>
+    <%= image_tag job.avatar.url(:medium) %>
     <div class="card-body">
       <h4 class="card-title"><%= job.name  %></h4>
       <p class="card-text">Description: <%= job.description %></p>
@@ -21,7 +21,7 @@
         <%= f.submit "add", :disable_with => 'Submiting...' %>
       <% end %>
     </div>
-    <div class="card-body boat job_boats">
+    <div class="card-body job_boats">
       <% job.boats.each do |boat| %>
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><%= boat.name %>

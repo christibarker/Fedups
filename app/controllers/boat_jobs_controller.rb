@@ -9,7 +9,7 @@ class BoatJobsController < ApplicationController
   	respond_to do |format|
 	  	@boat = Boat.find(params[:boat_job][:boat_id])
 	  	@job = Job.find(params[:boat_job][:job_id])
-	  	@boat_job = @boat.jobs << @job
+	  	@boat.jobs << @job
 	  	format.js
 		end	
   end
