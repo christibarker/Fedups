@@ -35,7 +35,7 @@
       <!-- add link, add job to there jobs -->
       <%# link_to image_tag("Add.png", class: "format_left"), user_path(current_user) %>
       <% if current_user == job.user %>
-        <%= link_to image_tag("delete.png", class: "format"), job,  method: :delete, remote: true, class: "delete_job" %>
+        <%= link_to image_tag("delete.png", class: "format"), job,  method: :delete, remote: true, class: "destroy_job" %>
         <%= link_to image_tag("Orange_Edit.png", class: "format"),edit_job_path(job) %>
       <% end %>
     </div>

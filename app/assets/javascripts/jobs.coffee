@@ -5,8 +5,8 @@ $(document).on 'turbolinks:load', ->
 	# $('.new_boat_job').on 'submit', ->
 	# 		window.job_section = $(this).closest('.job').attr('id')
 
-	$('.new_job').on 'submit', ->
-		window.job_section = $(this).closest('.job').attr('id')
+	# $('.new_job').on 'submit', ->
+	# 	window.job_section = $(this).closest('.job').attr('id')
 
 	$('.destroy_job').on 'ajax:success', ->
 		# console.log('worked')
