@@ -7,6 +7,11 @@
 // 	margin-bottom: 5%;
 // }
 
+.list {
+	overflow:scroll;
+	height: 300px;
+}
+
 .spacing {
    margin-left: 5%;
    margin-right: 3%;
@@ -45,6 +50,6 @@
 	display: inline-block;
 }
 
-.button{
+.button {
 	margin-left: 41%;
 }

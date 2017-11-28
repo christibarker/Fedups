@@ -17,6 +17,7 @@ class BoatJobsController < ApplicationController
   def destroy
   	respond_to do |format|
 		  @boat_job = BoatJob.where(boat_id: params[:boat_id]).where(job_id: params[:job_id]).first
+		  @boat_job.destroy
 	  	format.js
 	  end
   end

@@ -8,7 +8,7 @@ $(document).on 'turbolinks:load', ->
 	$('.new_job').on 'submit', ->
 		window.job_section = $(this).closest('.job').attr('id')
 
-	$('.destroy').on 'ajax:sucess', ->
+	$('.destroy_job').on 'ajax:success', ->
 		# console.log('worked')
 		$(this).closest('.job').remove()
 
