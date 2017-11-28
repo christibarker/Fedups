@@ -9,10 +9,10 @@ $(document).on 'turbolinks:load', ->
 			window.boat_section = $(this).closest('.boat').attr('id')
 			
 
-	$('.destroy').on 'ajax:sucess', ->
+	$(document).on 'ajax:success', '.delete_j', ->
 		# console.log('worked')
-		$(this).closest('.boat_jobs').remove()
+		$(this).closest('.list-group-item').remove()
 
-	$('.destroy').on 'ajax:sucess', ->
+	$(document).on 'ajax:success', '.delete_b', ->
 	# console.log('worked')
-		$(this).closest('.job_boats').remove()
+		$(this).closest('.list-group-item').remove()

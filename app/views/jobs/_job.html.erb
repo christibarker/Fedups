@@ -21,13 +21,13 @@
         <%= f.submit "add", :disable_with => 'Submiting...' %>
       <% end %>
     </div>
-    <div class="card-body job_boats">
+    <div class="card-body list_one job_boats">
       <% job.boats.each do |boat| %>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><%= boat.name %>
-          <% if current_user == job.user %>
-            <%= link_to image_tag("delete.png", class: "format_small"), destroy_boat_job_path(boat_id: boat.id, job_id: job.id),  method: :delete, remote: true %>
-          <% end %>
+        <% if current_user == job.user %>
+          <li class="list-group-item"><%= boat.name %>
+            <%= link_to image_tag("delete.png", class: "format_small"), destroy_boat_job_path(boat_id: boat.id, job_id: job.id),  method: :delete, remote: true, class: "delete_b" %>
+        <% end %>
       </ul>
       <% end %>
     </div>
@@ -35,7 +35,7 @@
       <!-- add link, add job to there jobs -->
       <%# link_to image_tag("Add.png", class: "format_left"), user_path(current_user) %>
       <% if current_user == job.user %>
-        <%= link_to image_tag("delete.png", class: "format"), job,  method: :delete, remote: true %>
+        <%= link_to image_tag("delete.png", class: "format"), job,  method: :delete, remote: true, class: "delete_job" %>
         <%= link_to image_tag("Orange_Edit.png", class: "format"),edit_job_path(job) %>
       <% end %>
     </div>

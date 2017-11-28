@@ -17,25 +17,24 @@
             <%= f.hidden_field :boat_id, value: boat.id %>
             <%= f.submit "add", :disable_with => 'Submiting...' %>
           <% end %>
-          <div class="card-body boat_jobs">
-              <% boat.jobs.each do |job| %>
+          <div class="card-body list boat_jobs">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><%= job.name %>
-                <% if current_user == boat.user %>
-                  <%= link_to image_tag("delete.png", class: "format_small"), destroy_boat_job_path(boat_id: boat.id, job_id: job.id),  method: :delete, remote: true %>
-                <% end %>
+              <% boat.jobs.each do |job| %>
+                <li class="list-group-item"><%= job.name %>
+                  <% if current_user == boat.user %>
+                    <%= link_to image_tag("delete.png", class: "format_small"), destroy_boat_job_path(boat_id: boat.id, job_id: job.id),  method: :delete, remote: true, class: "delete_j"%>
+                  <% end %>
+                </li>
+              <% end %>
             </ul>
-            <% end %>
           </div>
         <div class="card-body">
           <!-- add link, add job to there jobs -->
           <%# link_to image_tag("Add.png", class: "format_left"), user_path(current_user) %>
         <% if current_user == boat.user %>
-          <%= link_to image_tag("delete.png", class: "format"), boat,  method: :delete, remote: true %>
+          <%= link_to image_tag("delete.png", class: "format"), boat,  method: :delete, remote: true, class: "destroy_boat" %>
           <%= link_to image_tag("Orange_Edit.png", class: "format"), edit_boat_path(boat) %>
         <% end %>
-        </div>
-      </div>
-    </div>
-    <div>
-</div>
+        </div> <!-- edit links div -->
+      </div> <!-- dropdown div -->
+    </div> <!-- end of column -->

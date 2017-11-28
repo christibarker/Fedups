@@ -5,8 +5,7 @@ class Job < ApplicationRecord
 	
   belongs_to :user
   has_many :boat_jobs
- 	has_many :boats, through: :boat_jobs
-
+ 	has_many :boats, through: :boat_jobs, dependent: :destroy
   def local_boats()
   		jobs = Job.where(origin: location).where(current_user: user_id)
 

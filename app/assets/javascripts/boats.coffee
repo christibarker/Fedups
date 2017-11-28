@@ -8,6 +8,6 @@ $(document).on 'turbolinks:load', ->
 	$('.new_boat').on 'submit', ->
 		window.boat_section = $(this).closest('.boat').attr('id')
 
-	$('.destroy').on 'ajax:sucess', ->
+	$('.destroy_boat').on 'ajax:success', ->
 			# console.log('worked')
 		$(this).closest('.boat').remove()
