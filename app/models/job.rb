@@ -5,7 +5,7 @@ class Job < ApplicationRecord
 	validates :name, :uniqueness => true
 	validates_inclusion_of :orgin, in: ['USA', 'Russia', 'China', 'Thialand']
 	validates_inclusion_of :destination, in: ['USA', 'Russia', 'China', 'Thialand']
-	validates_length_of :cost, minimum: 4
+	validates_numericality_of :cost, :greater_than => 1000
 	validates_length_of :description, :minimum => 50
 	
   belongs_to :user

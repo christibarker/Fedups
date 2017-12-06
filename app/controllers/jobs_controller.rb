@@ -35,7 +35,7 @@ class JobsController < ApplicationController
 
   def update
     @job = Job.find(params[:id])
-    @job.update(job_params)
+    @job.update!(job_params)
     redirect_to jobs_path 
   end
 
@@ -50,6 +50,6 @@ class JobsController < ApplicationController
  private
 
   def job_params
-    params.require(:job).permit(:name, :cost, :description, :orgin, :destination, :avatar, :id)
+    params.require(:job).permit(:name, :cost, :description, :orgin, :destination, :avatar, :id, :containers_needed)
   end
 end
