@@ -5,6 +5,7 @@
         <%= f.text_field :name, placeholder: 'name', class: "form-control", id: "name" %>
         <br>
         <%= f.label :description %>
+         <p>(min. 50 characters)</p>
         <%= f.text_field :description, placeholder: 'description', class: "form-control", id: "description" %>
         <br>
         <%= f.label :orgin %>
@@ -17,6 +18,7 @@
         <%= f.text_field :containers_needed, placeholder: 'containers needed', class: "form-control", id: "containers_needed" %>
         <br>
         <%= f.label :cost %>
+         <p>(min. $1000)</p>
         <%= f.text_field :cost, placeholder: 'cost', class: "form-control", id: "cost" %>
         <br>
          <%= f.label :avatar, "add image" %>
