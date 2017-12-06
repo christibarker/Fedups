@@ -6,7 +6,7 @@
         <%= f.text_field :name, placeholder: 'name', class: "form-control", id: "name" %>
         <br>
         <%= f.label :location %>
-        <%= f.text_field :location, placeholder: 'location', class: "form-control", id: "location" %>
+        <%= f.select :location, ['USA', 'Russia', 'China', 'Thialand'], {}, {class: "form-control", id: "location"} %>
         <br>
         <%= f.label :max_capacity %>
         <%= f.text_field :max_capacity, placeholder: 'max_capacity', class: "form-control", id: "max_capacity" %>

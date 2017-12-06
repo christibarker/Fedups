@@ -8,10 +8,10 @@
         <%= f.text_field :description, placeholder: 'description', class: "form-control", id: "description" %>
         <br>
         <%= f.label :orgin %>
-        <%= f.text_field :orgin, placeholder: 'orgin', class: "form-control", id: "orgin" %>
+        <%= f.select :orgin, ['USA', 'Russia', 'China', 'Thialand'], {}, {class: "form-control", id: "orgin"} %>
         <br>
         <%= f.label :destination %>
-        <%= f.text_field :destination, placeholder: 'destination', class: "form-control", id: "destination" %>
+        <%= f.select :destination, ['USA', 'Russia', 'China', 'Thialand'], {}, {class: "form-control", id: "destination" } %>
         <br>
         <%= f.label :containers_needed %>
         <%= f.text_field :containers_needed, placeholder: 'containers needed', class: "form-control", id: "containers_needed" %>
