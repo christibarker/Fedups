@@ -23,5 +23,7 @@
 .byebug_history
 .restful_routing.rb
 
+ .env
+
 # Ignore encrypted secrets key file.
 config/secrets.yml.key
